@@ -19,17 +19,17 @@ body {
 }
 
 .header--troll-face {
-    height: 100%;
+    height: 130%;
     margin-right: 6px;
 }
 
 .header--title {
-    font-size: 1.25rem;
+    font-size: 1.30rem;
     margin-right: auto;
 }
 
 
 .header--description {
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     font-weight: 500;
 }
