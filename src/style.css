@@ -64,3 +64,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.meme--image {
+    margin: 30px auto;
+    max-width: 100%;
+}
