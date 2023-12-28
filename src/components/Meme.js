@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
-import memesData from '../memesData.js'
+import React, {useState,useEffect} from 'react'
 
 export default function Meme() {
+    const apiUrl = "https://api.imgflip.com/get_memes"
+
     // State of the meme
     const [meme, setMeme] = useState({
         topText: '',
@@ -10,7 +11,25 @@ export default function Meme() {
     }) 
     
     // State for all the meme images
-    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    const [allMemeImages, setAllMemeImages] = useState({})
+
+    // Fetch the meme images from the API
+    useEffect(() => {
+        fetch(apiUrl)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`Erreur HTTP! Statut: ${res.status}`)
+                } else {
+                    console.log("Succès de la requête!")
+                }
+
+                return res.json();
+            })
+            .then(data => setAllMemeImages(data))
+            .catch(error => console.log("Erreur lors de la requête:", error)
+        );
+    },[])
+    
 
     function getMemeImage() {
         const memesArray = allMemeImages.data.memes; // Access the memes array
@@ -62,7 +81,7 @@ export default function Meme() {
                 </button>
             </div>
            <div className="meme">
-                <img src={meme.randomImg} className="meme--image" />
+                <img src={meme.randomImg} className="meme--image" alt='Meme'/>
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>

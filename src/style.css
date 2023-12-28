@@ -71,7 +71,9 @@ body {
 }
 
 .meme--image {
-    width: 37.5em;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 3px;
 }
 
