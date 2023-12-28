@@ -22,15 +22,14 @@ export default function Meme() {
                 } 
                 return res.json();
             })
-            .then(data => setAllMemeImages(data))
+            .then(data => setAllMemeImages(data.data.memes))
             .catch(error => console.log("Erreur lors de la requête:", error)
         );
     },[])
     
 
     function getMemeImage() {
-        const memesArray = allMemeImages.data.memes; // Access the memes array
-        const randomMeme = memesArray[Math.floor(Math.random() * memesArray.length)]; // Get a random meme object from the array 
+        const randomMeme = allMemeImages[Math.floor(Math.random() * allMemeImages.length)]; // Get a random meme object from the array 
         
         setMeme(prevMeme => {
             return {
