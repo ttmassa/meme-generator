@@ -19,10 +19,7 @@ export default function Meme() {
             .then(res => {
                 if (!res.ok) {
                     throw new Error(`Erreur HTTP! Statut: ${res.status}`)
-                } else {
-                    console.log("Succès de la requête!")
-                }
-
+                } 
                 return res.json();
             })
             .then(data => setAllMemeImages(data))
