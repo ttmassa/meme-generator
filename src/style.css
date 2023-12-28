@@ -71,7 +71,7 @@ body {
 }
 
 .meme--image {
-    max-width: 100%;
+    width: 37.5em;
     border-radius: 3px;
 }
 
@@ -84,7 +84,7 @@ body {
     margin: 15px 0;
     padding: 0 5px;
     font-family: impact, sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
