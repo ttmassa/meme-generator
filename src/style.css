@@ -34,6 +34,44 @@ body {
     font-weight: 500;
 }
 
+@media only screen and (max-width: 767px) {
+    .header--container {
+        padding: 10px;
+    }
+
+    .header--troll-face {
+        height: 70%;
+        margin-right: 6px;
+    }
+
+    .header--title {
+        font-size: 0.9rem; 
+    }
+
+    .header--description {
+        font-size: 0.60rem; 
+    }
+
+    .meme--button {
+        font-size: 14px; 
+    }
+
+    .meme {
+        font-size: 0.35em;
+    }
+
+    .meme--container {
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .meme--form {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .meme--container {
     padding: 76px;
 }
