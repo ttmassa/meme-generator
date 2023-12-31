@@ -57,18 +57,23 @@ body {
     }
 
     .meme {
-        font-size: 0.35em;
+        font-size: 0.4em;
     }
 
     .meme--container {
-        padding: 10px;
+        padding: 0px;
         margin-left: 0;
     }
 
     .meme--form {
         border: 1px solid red;
         display: flex;
-        flex-direction: column;
+    }
+
+    .meme--input {
+        height: 10px;
+        width: 100%;
+        font-size: 8px;
     }
 }
 
